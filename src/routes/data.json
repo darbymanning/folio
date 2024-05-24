@@ -1,0 +1,73 @@
+{
+  "roles": [
+    {
+      "title": "Software Engineer",
+      "company": "Infinity Health",
+      "company_url": "https://infinity.health",
+      "start": "Jul 2022",
+      "end": "Present",
+      "bullets": [
+        "Redesigning the UI for Infinity web-app and native app",
+        "Building the Infinity mobile app using React Native",
+        "Rebuilding the Infinity web-app using Svelte and SvelteKit"
+      ]
+    },
+    {
+      "title": "Software Engineer",
+      "company": "Kyan",
+      "company_url": "https://kyan.com",
+      "start": "Oct 2022",
+      "end": "Jul 2022",
+      "bullets": [
+        "Working as the sole designer and developer on projects, responsible for the creative concepts and fully developed outputs of award winning projects",
+        "Creating bespoke and reusable vanilla JavaScript modules",
+        "Creating an in-house front-end boilerplate used by the team"
+      ]
+    },
+    {
+      "title": "Software Engineer",
+      "company": "Freelance",
+      "start": "Feb 2020",
+      "end": "Oct 2022"
+    },
+    {
+      "title": "Software Engineer",
+      "company": "Kyan",
+      "company_url": "https://kyan.com",
+      "start": "Dec 2017",
+      "end": "Feb 2020"
+    },
+    {
+      "title": "Designer, Software Engineer",
+      "company": "KBA Marketing",
+      "company_url": "https://kba.marketing",
+      "start": "Aug 2016",
+      "end": "Dec 2017"
+    },
+    {
+      "title": "CEO, Designer, Software Engineer",
+      "company": "Creative Little Dots",
+      "company_url": "https://creativelittledots.com",
+      "start": "Sep 2012",
+      "end": "Aug 2016"
+    },
+    {
+      "title": "Designer",
+      "company": "Imprint Colour",
+      "company_url": "https://imprintcolour.co.uk",
+      "start": "Jul 2006",
+      "end": "Aug 2012"
+    }
+  ],
+  "skills": [
+    [
+      "Svelte, SvelteKit",
+      "JavaScript, TypeScript",
+      "React, React Native, Next.js",
+      "HTML, CSS, Sass, Tailwind",
+      "Vitest, Jest, Playwright",
+      "GraphQL, REST"
+    ],
+    ["Contentful", "Hygraph", "Storyblok", "Supabase"]
+  ]
+}

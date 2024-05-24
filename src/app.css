@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --font-family-sans: "Raleway", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+@layer base {
+  @font-face {
+    font-family: "Geist Mono";
+    src: url("./GeistMono.woff2");
+    font-display: swap;
+  }
+
+  address {
+    all: unset;
+  }
+
+  body {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    line-height: 1.8;
+  }
+
+  ::selection {
+    background-color: var(--color-gray-600);
+    color: var(--color-white);
+  }
+}
