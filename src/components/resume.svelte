@@ -84,8 +84,8 @@
     class="grid gap-20 p-10 content-start animate-[fade-in_1s_500ms_ease-out_forwards] opacity-0"
   >
     <p class="text-lg">
-      A seasoned self-taught Software Engineer, with experience in agencies and private companies
-      using technology to solve real-world problems.
+      A seasoned, self-taught Software Engineer with experience in both agencies and private
+      companies, using technology to solve real-world problems.
     </p>
     <section class="grid gap-8">
       <h1 class="heading-2">Employment</h1>
