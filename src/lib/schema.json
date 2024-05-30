@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "roles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "company": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "url": { "type": "string", "format": "uri" }
+            },
+            "required": ["name"]
+          },
+          "start": { "type": "string" },
+          "end": { "type": "string" },
+          "bullets": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["title", "company", "start", "end"]
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "slug": { "type": "string" },
+          "logo": { "type": "string" },
+          "outputs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["Web App", "Native App", "Marketing Site"]
+            }
+          },
+          "stack": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "agency": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "url": { "type": "string", "format": "uri" }
+            },
+            "required": ["name", "url"]
+          },
+          "credits": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": { "type": "string" },
+                "role": { "type": "string" },
+                "url": { "type": "string", "format": "uri" }
+              },
+              "required": ["name", "role"]
+            }
+          },
+          "works": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["UI / UX", "Development"]
+            }
+          },
+          "url": { "type": "string", "format": "uri" },
+          "image": { "type": "string" },
+          "headline": { "type": "string" },
+          "content": { "type": "string" }
+        },
+        "required": ["name", "slug", "outputs", "stack", "works", "url", "headline"]
+      }
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "icon": { "type": "string" }
+        },
+        "required": ["name", "url"]
+      }
+    }
+  },
+  "required": ["roles", "skills", "projects", "links"]
+}

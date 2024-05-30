@@ -5,12 +5,27 @@
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
+
+  --line-height-base: 1.9;
+  --font-size-xs--line-height: var(--line-height-base);
+  --font-size-sm--line-height: var(--line-height-base);
+  --font-size-base--line-height: var(--line-height-base);
+  --font-size-lg--line-height: var(--line-height-base);
+  --font-size-xl--line-height: var(--line-height-base);
+  --font-size-2xl--line-height: var(--line-height-base);
+  --font-size-3xl--line-height: var(--line-height-base);
+  --font-size-4xl--line-height: var(--line-height-base);
+  --font-size-5xl--line-height: var(--line-height-base);
+  --font-size-6xl--line-height: var(--line-height-base);
+  --font-size-7xl--line-height: var(--line-height-base);
+  --font-size-8xl--line-height: var(--line-height-base);
+  --font-size-9xl--line-height: var(--line-height-base);
 }
 
 @layer base {
   @font-face {
     font-family: "Geist Mono";
-    src: url("./GeistMono.woff2");
+    src: url("/GeistMono.woff2");
     font-display: swap;
   }
 
@@ -18,7 +33,7 @@
     all: unset;
   }
 
-  body {
+  html {
     background-color: var(--color-black);
     color: var(--color-white);
     line-height: 1.8;
@@ -27,5 +42,60 @@
   ::selection {
     background-color: var(--color-gray-600);
     color: var(--color-white);
+  }
+
+  :focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--color-white) 20%, transparent);
+    outline-offset: 0.2em;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      scale: 1.01;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+}
+
+@layer components {
+  .list-box {
+    margin-left: var(--spacing-4);
+    position: relative;
+
+    li::before {
+      position: absolute;
+      left: calc(-1 * var(--spacing-4));
+      margin-top: 0.6em;
+      content: "";
+      display: block;
+      width: var(--spacing-2);
+      height: var(--spacing-2);
+      background-color: var(--color-gray-600);
+    }
+  }
+
+  .heading-1,
+  .prose h1 {
+    @apply text-4xl md:text-6xl font-mono leading-snug;
+  }
+
+  .heading-2,
+  .prose h2 {
+    @apply font-mono text-3xl leading-snug;
+  }
+
+  .prose {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply mt-6;
+    }
   }
 }

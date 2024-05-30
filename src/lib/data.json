@@ -1,0 +1,211 @@
+{
+  "$schema": "./schema.json",
+  "roles": [
+    {
+      "title": "Software Engineer",
+      "company": {
+        "name": "Infinity Health",
+        "url": "https://infinity.health"
+      },
+      "start": "Jul 2022",
+      "end": "Present",
+      "bullets": [
+        "Redesigning the UI for Infinity web-app and native app",
+        "Building the Infinity mobile app using React Native",
+        "Rebuilding the Infinity web-app using Svelte and SvelteKit"
+      ]
+    },
+    {
+      "title": "Software Engineer",
+      "company": {
+        "name": "Kyan",
+        "url": "https://kyan.com"
+      },
+      "start": "Oct 2022",
+      "end": "Jul 2022",
+      "bullets": [
+        "Working as the sole designer and Engineer on projects, responsible for the creative concepts and fully developed outputs of award winning projects",
+        "Creating bespoke and reusable vanilla JavaScript modules",
+        "Creating an in-house boilerplate used by the team"
+      ]
+    },
+    {
+      "title": "Software Engineer",
+      "company": {
+        "name": "Freelance"
+      },
+      "start": "Feb 2020",
+      "end": "Oct 2022"
+    },
+    {
+      "title": "Software Engineer",
+      "company": {
+        "name": "Kyan",
+        "url": "https://kyan.com"
+      },
+      "start": "Dec 2017",
+      "end": "Feb 2020"
+    },
+    {
+      "title": "Designer, Software Engineer",
+      "company": {
+        "name": "KBA Marketing",
+        "url": "https://kba.marketing"
+      },
+      "start": "Aug 2016",
+      "end": "Dec 2017"
+    },
+    {
+      "title": "CEO, Designer, Software Engineer",
+      "company": {
+        "name": "Creative Little Dots",
+        "url": "https://creativelittledots.com"
+      },
+      "start": "Sep 2012",
+      "end": "Aug 2016"
+    },
+    {
+      "title": "Designer",
+      "company": {
+        "name": "Imprint Colour",
+        "url": "https://imprintcolour.co.uk"
+      },
+      "start": "Jul 2006",
+      "end": "Aug 2012"
+    }
+  ],
+  "skills": [
+    [
+      "Svelte, SvelteKit",
+      "JavaScript, TypeScript",
+      "React, React Native, Next.js",
+      "HTML, CSS, Sass, Tailwind",
+      "Vitest, Jest, Playwright",
+      "GraphQL, REST"
+    ],
+    ["Contentful", "Hygraph", "Storyblok", "Supabase"]
+  ],
+  "projects": [
+    {
+      "name": "Infinity",
+      "slug": "infinity",
+      "logo": "/projects/infinity/logo.svg",
+      "outputs": ["Web App", "Native App"],
+      "stack": [
+        "React Native",
+        "Expo",
+        "Svelte",
+        "SvelteKit",
+        "Bun",
+        "Bun test",
+        "Playwright",
+        "WebSockets",
+        "Zod"
+      ],
+      "works": ["UI / UX", "Development"],
+      "url": "https://infinity.health",
+      "credits": [
+        {
+          "name": "Nick Bolt",
+          "role": "Software Engineer",
+          "url": "https://www.linkedin.com/in/nicholas-bolt-850365267"
+        },
+        {
+          "name": "Vinicius Horewicz",
+          "role": "Head of Engineering",
+          "url": "https://www.linkedin.com/in/viniciushorewicz"
+        }
+      ],
+      "image": "/projects/infinity/image-1.png",
+      "headline": "<p>Infinity is a project management solution for healthcare. Healthcare professionals use Infinity to manage their workload and coordinate care in and across multidisciplinary teams. Infinity gives them time back every day to make patient care safer and more efficient.</p><p>I have redesigned the interface for both the web and native app, rewritten the native app in React Native, and built the web app using Svelte and SvelteKit.</p>",
+      "content": "<h2>UI</h2><p>My role at Infinity Health was meant to be soley as a software engineer. But given my design background and the requirements of the business, it didn't take long for me to get my teeth into redesigning the interface. The existing interface was lacking some refinement, and what started as incremental interface improvements led to a complete design rehaul.</p><p>Prior to joining Infinity Health I was working with at Kyan on the ITVX design system team. I took the learnings I had from this and built a design system for Infinity Health to use across the native app and web app. I was determined to work pragmatically and ensure the design system truly aided the team in being productive, without spending countless hours in Figma.</p><h2>Native App</h2><p>There was an existing native app which was already built in React Native. However there were a lot of technical debt, and the codebase was not scalable. Upon reviewing with the Head of Engineering we decided that it would be best to rewrite the app. We took this opportunity to take our time with the codebase, making choices that were well thought out and would make shipping new features and functionality more efficient.</p><p>I worked closely with the Head of Engineering and the product manager to ensure that all existing functionality was retained, whilst delivering new features in a newly designed interface.</p><p>Since myself and the Head of Engineering are both big Svelte advocates, we tried to make the codebase more reasonable than a traditional React Native app would be. We created a custom store using Zustand which gave us a really compelling solution to manage local state, replicating the functionality of Svelte stores with a similar API. Small wins like this meant moving between Svelte and React Native took less cognitive load.</p><h2>Web App</h2><p>Most recently I have been rebuilding the web app using Svelte and SvelteKit. This has been a more ambitious undertaking than the native app, as there is much more functionality and decisions to be made. As another greenfield project we again have an opportunity to work in a way that is more scalable, and deliver a more reactive and intuitive user experience.</p><p>I've been able to implement WebSockets to enable real-time communcation, which is imperative for a task management platform. We've also used OpenAPI for the API, and generated an API client which automatically builds a new release whenever the OpenAPI spec changes. This, twinned with a library called <a href=\"https://github.com/supermacro/neverthrow\" target=\"blank\" rel=\"noreferrer nofollow\">neverthrow</a> enables us to work with the API in a functional way without any of the pitfalls of 'try catch' blocks.</p>"
+    },
+    {
+      "name": "Vector Suite",
+      "slug": "vector-suite",
+      "logo": "/projects/vector-suite/logo.svg",
+      "outputs": ["Marketing Site", "Web App"],
+      "stack": ["Svelte", "SvelteKit", "Hygraph", "Zendesk"],
+      "works": ["UI / UX", "Development"],
+      "url": "https://vectorsuite.co.uk",
+      "image": "/projects/vector-suite/image-1.png",
+      "headline": "Marketing site and web app for Vector Suite"
+    },
+    {
+      "name": "The Lane",
+      "slug": "the-lane",
+      "logo": "/projects/the-lane/logo.svg",
+      "outputs": ["Marketing Site"],
+      "stack": ["React", "Next.js", "Contentful", "React Testing Library"],
+      "works": ["Development"],
+      "agency": {
+        "name": "Kyan",
+        "url": "https://kyan.com"
+      },
+      "credits": [
+        {
+          "name": "Chris Myers",
+          "role": "UI Design",
+          "url": "https://twitter.com/LittleDotChris"
+        },
+        {
+          "name": "Pete White",
+          "role": "UI Design",
+          "url": "https://petewhite.co.uk"
+        },
+        {
+          "name": "David Quilter",
+          "role": "Software Engineer",
+          "url": "https://www.linkedin.com/in/david-quilter-95762a23"
+        },
+        {
+          "name": "Tom Marshall",
+          "role": "Solutions Architect",
+          "url": "https://x.com/_tommarshall"
+        }
+      ],
+      "url": "https://thelane.co.uk",
+      "image": "/projects/the-lane/image-1.png",
+      "headline": "Marketing site for The Lane"
+    },
+    {
+      "name": "Mosaic Middle East",
+      "slug": "mosaic-middle-east",
+      "logo": "/projects/mosaic-middle-east/logo.svg",
+      "outputs": ["Marketing Site"],
+      "stack": ["Svelte", "SvelteKit", "WordPress API", "Stripe"],
+      "works": ["UI / UX", "Development"],
+      "agency": {
+        "name": "Creative Little Dots",
+        "url": "https://creativelittledots.co.uk"
+      },
+      "credits": [
+        {
+          "name": "Matt Pilott",
+          "role": "Software Engineer",
+          "url": "https://twitter.com/Matt_Pilott"
+        }
+      ],
+      "url": "https://mosaicmiddleeast.org",
+      "image": "/projects/mosaic-middle-east/image-1.png",
+      "headline": "Marketing site for Mosaic Middle East"
+    }
+  ],
+  "links": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/darbymanning",
+      "icon": "/github.svg"
+    },
+    {
+      "name": "Twitter",
+      "url": "https://twitter.com/LittleDotDarby",
+      "icon": "/x.svg"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/in/darbymanning",
+      "icon": "/linkedin.svg"
+    }
+  ]
+}
