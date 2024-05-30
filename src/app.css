@@ -59,6 +59,28 @@
       scale: 1;
     }
   }
+
+  @media print {
+    @page {
+      size: 210mm 297mm;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    :root {
+      font-size: 9pt;
+    }
+
+    [data-scroll] {
+      transform: none !important;
+    }
+
+    [data-scroll-css-progress]:not([class*="print:\!opacity-"]) {
+      opacity: 100% !important;
+    }
+  }
 }
 
 @layer components {
@@ -80,7 +102,7 @@
 
   .heading-1,
   .prose h1 {
-    @apply text-4xl md:text-6xl font-mono leading-snug;
+    @apply text-4xl md:text-6xl font-mono leading-snug md:leading-snug print:text-5xl print:leading-snug;
   }
 
   .heading-2,

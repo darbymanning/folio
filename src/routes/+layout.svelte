@@ -40,7 +40,7 @@
 </svelte:head>
 
 <nav
-  class="border-b gap-4 border-gray-400/15 sticky top-0 bg-black/50 backdrop-blur-xl z-10 min-h-24 items-center flex"
+  class="print:hidden border-b gap-4 border-gray-400/15 sticky top-0 bg-black/50 backdrop-blur-xl z-10 min-h-24 items-center flex"
 >
   <div
     class="p-10 py-6 max-w-7xl mx-auto w-full flex justify-between flex-wrap items-center gap-y-4"
@@ -74,9 +74,9 @@
 
 <main class="max-w-7xl mx-auto relative grid gap-10 md:gap-40">
   {@render children()}
-  <Seperator />
+  <Seperator class="print:hidden" />
   <Contact />
-  <footer class="p-10 text-center grid gap-10">
+  <footer class="print:hidden p-10 text-center grid gap-10">
     <Seperator />
     <span class="text-gray-500">
       <figure class="text-4xl">👋</figure>

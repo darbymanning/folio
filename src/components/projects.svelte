@@ -19,7 +19,7 @@
   </a>
 {/snippet}
 
-<section class="p-10 grid gap-20 relative" id="projects">
+<section class="print:hidden p-10 grid gap-20 relative" id="projects">
   <h1
     data-scroll
     data-scroll-speed="0.01"

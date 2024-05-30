@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { enhance } from "$app/forms"
+  import { applyAction, enhance } from "$app/forms"
   import { page } from "$app/stores"
   import { slide } from "svelte/transition"
 
@@ -8,6 +8,7 @@
 
 {#snippet input({ label, type = "text" })}
   {@const id = label.toLowerCase()}
+  <!-- eslint-disable-next-line svelte/valid-compile -->
   {@const value = $page.form?.[id] || ""}
 
   <label for={id} class="relative">
@@ -21,7 +22,7 @@
   {/if}
 {/snippet}
 
-<section class="p-10" id="contact">
+<section class="p-10 grid gap-2 print:hidden" id="contact">
   <h1 class="heading-1" data-scroll data-scroll-speed="0.12">Contact</h1>
   {#if $page.form?.sent}
     <p transition:slide data-scroll data-scroll-speed="0.12">Thank you for your message.</p>
@@ -41,9 +42,10 @@
         use:enhance={() => {
           submitting = true
 
-          return async ({ update }) => {
+          return async ({ result }) => {
             submitting = false
-            update()
+
+            await applyAction(result)
           }
         }}
       >

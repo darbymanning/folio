@@ -32,11 +32,14 @@
   {/if}
 {/snippet}
 
-<section class="grid md:grid-cols-[2fr_1fr] grid-rows-[auto_1fr]" id="resume">
+<section
+  class="grid print:grid-cols-[2fr_1fr] md:grid-cols-[2fr_1fr] grid-rows-[auto_1fr]"
+  id="resume"
+>
   <header
     data-scroll
     data-scroll-speed="0.2"
-    class="grid gap-4 font-mono p-10 h-[50vh] max-h-[600px] content-end col-span-full"
+    class="grid gap-4 font-mono p-10 print:h-[20vh] h-[50vh] max-h-[600px] content-end col-span-full"
   >
     <h1
       data-scroll
@@ -54,10 +57,9 @@
     </span>
     <ul
       data-scroll
-      data-scroll-css-progress
       data-scroll-speed="0.1"
       data-scroll-offset="0,20%"
-      class="flex items-center space-x-4 opacity-[calc(1_-_var(--progress))]"
+      class="print:hidden flex items-center space-x-4"
     >
       {#each links as link, index}
         {@const delay = 600 + index * 50}
@@ -125,14 +127,14 @@
   </aside>
 
   <figure
-    class="absolute pointer-events-none -z-10 right-0 -translate-y-16 animate-[fade-in_1s_600ms_ease-out_forwards] opacity-0"
+    class="absolute pointer-events-none -z-10 right-0 -translate-y-16 animate-[fade-in_1s_600ms_ease-out_forwards] opacity-0 print:translate-x-[10%] print:-translate-y-[20%]"
   >
     <img
       fetchpriority="high"
       data-scroll
       data-scroll-speed="0.05"
       data-scroll-css-progress
-      class="rounded-full size-[80vw] max-h-[700px] max-w-[700px] opacity-[calc(0.5_-_var(--progress))]"
+      class="print:!opacity-30 rounded-full size-[80vw] max-h-[700px] max-w-[700px] opacity-[calc(0.5_-_var(--progress))] print:size-[65vw]"
       src="me.jpg"
       alt="A truly beautiful man"
     />

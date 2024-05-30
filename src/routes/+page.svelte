@@ -7,5 +7,5 @@
 </script>
 
 <Resume {...data} />
-<Seperator />
+<Seperator class="print:hidden" />
 <Projects {...data} />
