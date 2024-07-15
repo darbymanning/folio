@@ -15,14 +15,14 @@
 </script>
 
 <a
-  class={cn(classname, "flex gap-2 items-center font-mono hover:brightness-90 group")}
+  class={cn("flex gap-2 items-center font-mono hover:brightness-90 group", classname)}
   {rel}
   {target}
   {href}
 >
   {@render children()}
   <span
-    class="scale-125 top-0.5 rotate-45 -translate-x-3.5 relative group-hover:translate-none group-hover:rotate-none transition-all opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus:rotate-none group-focus:translate-none"
+    class="sr-only pointer-events-none select-none scale-125 top-0.5 rotate-45 -translate-x-3.5 relative group-hover:translate-none group-hover:rotate-none transition-all opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus:rotate-none group-focus:translate-none"
     >&#8599;</span
   >
 </a>

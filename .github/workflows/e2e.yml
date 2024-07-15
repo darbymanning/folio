@@ -1,0 +1,51 @@
+name: E2E Tests
+
+env:
+  CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+  POSTMARK_API_TOKEN: ${{ secrets.POSTMARK_API_TOKEN }}
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  playwright-tests:
+    runs-on: ubuntu-latest
+    env:
+      POSTMARK_API_TOKEN: ${{ secrets.POSTMARK_API_TOKEN }}
+      PUBLIC_UUID_NAMESPACE: ${{ secrets.PUBLIC_UUID_NAMESPACE }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      SHOW_PRIVATE_DATA_PARAM: ${{ secrets.SHOW_PRIVATE_DATA_PARAM }}
+      EMAIL: ${{ secrets.EMAIL }}
+      MOBILE_NUMBER: ${{ secrets.MOBILE_NUMBER }}
+      ADDRESS: ${{ secrets.ADDRESS }}
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Install Playwright Browsers
+        run: bunx playwright install --with-deps
+
+      - name: Run Playwright tests
+        run: bun test:e2e
+
+      - name: Install Wrangler CLI
+        if: always()
+        run: npm install -g wrangler
+
+      - name: Publish Playwright Report to Cloudflare Pages
+        if: always()
+        run: wrangler pages deploy ./playwright-report --project-name=dm-portfolio-e2e-status

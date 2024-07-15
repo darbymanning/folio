@@ -8,4 +8,4 @@
   let { class: classname }: Props = $props()
 </script>
 
-<hr class={cn(classname, "border-t border-gray-400/15")} />
+<hr class={cn("border-t border-gray-400/15", classname)} />

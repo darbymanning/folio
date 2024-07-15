@@ -7,11 +7,13 @@
   import Contact from "../components/contact.svelte"
   import Seperator from "$components/seperator.svelte"
   import "locomotive-scroll/locomotive-scroll.css"
-  import { cn } from "$lib/utils"
+  import { cn, is_reduced_motion } from "$lib/utils"
 
   let locomotive_scroll: import("locomotive-scroll").default | undefined
 
   afterNavigate(async () => {
+    if (is_reduced_motion()) return
+
     const { default: LocomotiveScroll } = await import("locomotive-scroll")
     locomotive_scroll = new LocomotiveScroll({ autoStart: false })
     locomotive_scroll.start()

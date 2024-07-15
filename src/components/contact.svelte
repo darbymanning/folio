@@ -1,14 +1,14 @@
 <script lang="ts">
   import { applyAction, enhance } from "$app/forms"
   import { page } from "$app/stores"
+  import { label_id } from "$lib/utils"
   import { slide } from "svelte/transition"
 
   let submitting = $state(false)
 </script>
 
 {#snippet input({ label, type = "text" })}
-  {@const id = label.toLowerCase()}
-  <!-- eslint-disable-next-line svelte/valid-compile -->
+  {@const id = label_id(label)}
   {@const value = $page.form?.[id] || ""}
 
   <label for={id} class="relative">
@@ -25,7 +25,14 @@
 <section class="p-10 grid gap-2 print:hidden" id="contact">
   <h1 class="heading-1" data-scroll data-scroll-speed="0.12">Contact</h1>
   {#if $page.form?.sent}
-    <p transition:slide data-scroll data-scroll-speed="0.12">Thank you for your message.</p>
+    <p
+      transition:slide
+      data-scroll
+      data-scroll-speed="0.12"
+      data-testid={$page.form.honey ? "honeypot" : undefined}
+    >
+      Thank you for your message.
+    </p>
   {:else}
     <div transition:slide>
       <p data-scroll data-scroll-speed="0.12">
@@ -58,6 +65,14 @@
             {/if}
           </div>
         {/if}
+        <label for="first_name" class="🍯">First name</label>
+        <input
+          class="🍯"
+          id="first_name"
+          name="first_name"
+          autocomplete="off"
+          placeholder="First name"
+        />
         {@render input({ label: "Name" })}
         {@render input({ label: "Email", type: "email" })}
         {@render input({ label: "Message", type: "textarea" })}
@@ -73,6 +88,15 @@
 </section>
 
 <style>
+  .🍯 {
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+    width: 0;
+    height: 0;
+    z-index: -1;
+  }
+
   textarea,
   input {
     padding: var(--spacing-3);

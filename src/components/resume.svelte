@@ -110,6 +110,7 @@
             <Link href="mailto:{locals.private_data.email}">
               {locals.private_data.email}
             </Link>
+            <Link class="hidden print:block" href="https://darbymanning.com">darbymanning.com</Link>
           </div>
           <address class="whitespace-break-spaces">
             {locals.private_data.address}
