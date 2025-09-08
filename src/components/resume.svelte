@@ -6,26 +6,26 @@
   let { roles, locals, skills, links }: PageData = $props()
 </script>
 
-{#snippet role_snippet({ title, company, start, end, bullets })}
+{#snippet role_snippet(role: PageData["roles"][number])}
   <div class="flex gap-2 text-xl items-center flex-wrap">
     <h2 class="font-mono">
-      {title}
+      {role.title}
     </h2>
     <figure class="text-gray-600">/</figure>
-    {#if company.url}
-      <Link class="text-gray-500" href={company.url}>
-        {company.name}
+    {#if role.company.url}
+      <Link class="text-gray-500" href={role.company.url}>
+        {role.company.name}
       </Link>
     {:else}
-      <span class="font-mono text-gray-500">{company.name}</span>
+      <span class="font-mono text-gray-500">{role.company.name}</span>
     {/if}
   </div>
   <span class="text-gray-500 font-mono">
-    <time>{start}</time> - <time>{end}</time>
+    <time>{role.start}</time> - <time>{role.end}</time>
   </span>
-  {#if bullets}
+  {#if role.bullets}
     <ul class="list-box m-4">
-      {#each bullets as bullet}
+      {#each role.bullets as bullet}
         <li>{bullet}</li>
       {/each}
     </ul>
@@ -39,7 +39,7 @@
   <header
     data-scroll
     data-scroll-speed="0.2"
-    class="grid gap-4 font-mono p-10 print:h-[20vh] h-[50vh] max-h-[600px] content-end col-span-full"
+    class="grid gap-4 print:gap-0 font-mono p-10 print:pb-0 print:h-[auto] h-[50vh] max-h-[600px] content-end col-span-full"
   >
     <h1
       data-scroll
@@ -78,7 +78,7 @@
     </ul>
   </header>
 
-  <Seperator class="col-span-full" />
+  <Seperator class="col-span-full print:hidden" />
 
   <div
     class="grid gap-20 p-10 content-start animate-[fade-in_1s_500ms_ease-out_forwards] opacity-0"
@@ -135,7 +135,7 @@
       data-scroll
       data-scroll-speed="0.05"
       data-scroll-css-progress
-      class="print:!opacity-30 rounded-full size-[80vw] max-h-[700px] max-w-[700px] opacity-[calc(0.5_-_var(--progress))] print:size-[65vw]"
+      class="print:!opacity-30 rounded-full size-[80vw] max-h-[700px] max-w-[700px] opacity-[calc(0.5_-_var(--progress))] print:size-[50vw]"
       src="me.jpg"
       alt="A truly beautiful man"
     />

@@ -111,12 +111,12 @@
 
   .heading-1,
   .prose h1 {
-    @apply text-4xl md:text-6xl font-mono leading-snug md:leading-snug print:text-5xl print:leading-snug;
+    @apply text-4xl md:text-6xl font-mono leading-snug md:leading-snug print:text-4xl print:leading-snug;
   }
 
   .heading-2,
   .prose h2 {
-    @apply font-mono text-3xl leading-snug;
+    @apply font-mono text-3xl leading-snug print:text-2xl print:leading-tight;
   }
 
   .prose {
