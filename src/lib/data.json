@@ -2,7 +2,7 @@
   "$schema": "./schema.json",
   "roles": [
     {
-      "title": "Software Engineer, Designer",
+      "title": "Senior Software Engineer, Designer",
       "company": {
         "name": "Self Employed",
         "url": "https://darbymanning.com"
@@ -10,12 +10,12 @@
       "start": "May 2025",
       "end": "Present",
       "bullets": [
-        "Designing and developing websites and applications using Svelte and SvelteKit",
-        "Developing bespoke plugins for Storyblok, for custom integrations"
+        "Leading design and development of websites and applications using React, Svelte and SvelteKit",
+        "Developing bespoke Storyblok plugins and integrations for complex content workflows"
       ]
     },
     {
-      "title": "Software Engineer",
+      "title": "Senior Software Engineer",
       "company": {
         "name": "Infinity Health",
         "url": "https://infinity.health"
@@ -37,7 +37,7 @@
       "start": "Oct 2022",
       "end": "Jul 2022",
       "bullets": [
-        "Working as the sole designer and Engineer on projects, responsible for the creative concepts and fully developed outputs of award winning projects"
+        "Sole designer and engineer on projects, accountable for concepts through delivery on award‑winning work"
       ]
     },
     {

@@ -37,7 +37,7 @@
   <title>Darby Manning</title>
   <meta
     name="description"
-    content="A seasoned, self-taught Software Engineer with experience in both agencies and private companies, using technology to solve real-world problems."
+    content="Senior software engineer and designer shipping fast, accessible products with Svelte, React and TypeScript. Leads architecture, design systems and delivery across web and native."
   />
 </svelte:head>
 
